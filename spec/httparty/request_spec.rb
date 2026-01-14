@@ -489,7 +489,7 @@ RSpec.describe HTTParty::Request do
         end
       end
 
-      context 'when mulipart option is provided' do
+      context 'when multipart option is provided' do
         it "sets header Content-Type: multipart/form-data; boundary=" do
           @request.options[:body] = { text: 'something' }
           @request.options[:multipart] = true
@@ -723,7 +723,7 @@ RSpec.describe HTTParty::Request do
           expect(resp.body.encoding).to eq(Encoding.find("UTF-8"))
         end
 
-        context 'when stubed body is frozen' do
+        context 'when stubbed body is frozen' do
           let(:response) do
             stub_response "Content".force_encoding('ascii-8bit').freeze
           end
@@ -792,7 +792,7 @@ RSpec.describe HTTParty::Request do
         response.initialize_http_header("Content-Type" => "text/plain;charset = utf-lols")
         resp = @request.perform
 
-        # This encoding does not exist, thus the string should not be encodd with it
+        # This encoding does not exist, thus the string should not be encoded with it
 
         expect(resp.body).to eq("Content")
         expect(resp.body.encoding).to eq("Content".encoding)

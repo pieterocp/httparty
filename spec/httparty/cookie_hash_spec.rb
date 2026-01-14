@@ -85,7 +85,7 @@ RSpec.describe HTTParty::CookieHash do
       expect(@s).not_to match(/samesite=Strict/)
     end
 
-    it "should not include client side only cookies even when attributes use camal case" do
+    it "should not include client side only cookies even when attributes use camel case" do
       @cookie_hash.add_cookies(Path: "/")
       @s = @cookie_hash.to_cookie_string
       expect(@s).not_to match(/Path=\//)
