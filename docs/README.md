@@ -7,7 +7,7 @@ Makes http fun again!
 - [Working with SSL](#working-with-ssl)
 
 ## Parsing JSON
-If the response Content Type is `application/json`, HTTParty will parse the response and return Ruby objects such as a hash or array. The default behavior for parsing JSON will return keys as strings. This can be supressed with the `format` option. To get hash keys as symbols:
+If the response Content Type is `application/json`, HTTParty will parse the response and return Ruby objects such as a hash or array. The default behavior for parsing JSON will return keys as strings. This can be suppressed with the `format` option. To get hash keys as symbols:
 
 ```ruby
 response = HTTParty.get('http://example.com', format: :plain)
