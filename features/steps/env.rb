@@ -1,4 +1,4 @@
-require 'mongrel'
+require_relative '../../config/initializers/mongrel_patch'
 require './lib/httparty'
 require 'rspec/expectations'
 require 'aruba/cucumber'
